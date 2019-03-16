@@ -1,5 +1,5 @@
 #this is the main csv which contains the important information for all the following steps, it should be formated as samples.csv example
-sampleCSVpath: /data/browna6/pwgs_snakemakeegfr_RA7_39.csv
+sampleCSVpath: /data/browna6/pwgs_snakemake/egfr_RA7_39.csv
 #sampleCSVpath: /data/browna6/evolution/egfr_samples copy.csv
 
 
