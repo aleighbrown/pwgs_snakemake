@@ -66,9 +66,9 @@ def makeVCFtypesParam(wildcard):
 #this function generates a string of random numbers given the number of chains we want to run wtih
 
 def make_chains(n_chains):
-    chain_string = ""
+    chain_string = "-r " 
     for i in range(0,n_chains):
-        chain_string += "-r " + str(random.randint(1,10000)) + " "
+        chain_string += str(random.randint(1,10000)) + " "
     return(chain_string)
 
 
