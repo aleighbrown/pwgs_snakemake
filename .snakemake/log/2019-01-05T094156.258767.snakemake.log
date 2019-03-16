@@ -1,0 +1,56 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	5	move_and_unzip_files
+	6
+
+[Sat Jan  5 09:41:57 2019]
+rule move_and_unzip_files:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0038/CL0038_T2D_E/CL0038_T2D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0038/CL0038_T2D_E/CL0038_T2D_E.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0038/CL0038_T2D_E/CL0038_T2D_E.summ.json.gz
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T2D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T2D_E.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T2D_E.summ.json
+    jobid: 2
+    wildcards: patient=CL0038, sample=CL0038_T2D_E
+
+Job failed, going on with independent jobs.
+
+[Sat Jan  5 09:41:58 2019]
+rule move_and_unzip_files:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0038/CL0038_T1D_E/CL0038_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0038/CL0038_T1D_E/CL0038_T1D_E.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0038/CL0038_T1D_E/CL0038_T1D_E.summ.json.gz
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T1D_E.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T1D_E.summ.json
+    jobid: 1
+    wildcards: patient=CL0038, sample=CL0038_T1D_E
+
+Job failed, going on with independent jobs.
+
+[Sat Jan  5 09:42:00 2019]
+rule move_and_unzip_files:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0038/CL0038_T3D_E/CL0038_T3D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0038/CL0038_T3D_E/CL0038_T3D_E.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0038/CL0038_T3D_E/CL0038_T3D_E.summ.json.gz
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T3D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T3D_E.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T3D_E.summ.json
+    jobid: 4
+    wildcards: patient=CL0038, sample=CL0038_T3D_E
+
+Job failed, going on with independent jobs.
+
+[Sat Jan  5 09:42:02 2019]
+rule move_and_unzip_files:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0040/CL0040_T3D_E/CL0040_T3D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0040/CL0040_T3D_E/CL0040_T3D_E.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0040/CL0040_T3D_E/CL0040_T3D_E.summ.json.gz
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T3D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T3D_E.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T3D_E.summ.json
+    jobid: 3
+    wildcards: patient=CL0040, sample=CL0040_T3D_E
+
+Job failed, going on with independent jobs.
+
+[Sat Jan  5 09:42:04 2019]
+rule move_and_unzip_files:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0040/CL0040_T1D_E/CL0040_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0040/CL0040_T1D_E/CL0040_T1D_E.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0040/CL0040_T1D_E/CL0040_T1D_E.summ.json.gz
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T1D_E.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T1D_E.summ.json
+    jobid: 5
+    wildcards: patient=CL0040, sample=CL0040_T1D_E
+
+Job failed, going on with independent jobs.
+Exiting because a job execution failed. Look above for error message
+Complete log: /spin1/users/browna6/pwgs_snakemake/.snakemake/log/2019-01-05T094156.258767.snakemake.log

@@ -1,0 +1,57 @@
+Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
+Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	3	move_and_unzip_files
+	3	run_final_parser
+	3	write_results
+	10
+
+[Mon Jan  7 14:24:28 2019]
+rule write_results:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0084/CL0084_T1D_E2/trees.zip
+    output: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0084/CL0084_T1D_E2/CL0084_T1D_E2.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0084/CL0084_T1D_E2/CL0084_T1D_E2.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0084/CL0084_T1D_E2/CL0084_T1D_E2.summ.json.gz
+    jobid: 52
+    wildcards: patient=CL0084, sample=CL0084_T1D_E2
+
+[Mon Jan  7 14:25:26 2019]
+Finished job 52.
+1 of 10 steps (10%) done
+
+[Mon Jan  7 14:25:26 2019]
+rule write_results:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0083/CL0083_T1D_E/trees.zip
+    output: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0083/CL0083_T1D_E/CL0083_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0083/CL0083_T1D_E/CL0083_T1D_E.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0083/CL0083_T1D_E/CL0083_T1D_E.summ.json.gz
+    jobid: 48
+    wildcards: patient=CL0083, sample=CL0083_T1D_E
+
+[Mon Jan  7 14:25:47 2019]
+Finished job 48.
+2 of 10 steps (20%) done
+
+[Mon Jan  7 14:25:47 2019]
+rule write_results:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0084/CL0084_T2D_E/trees.zip
+    output: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0084/CL0084_T2D_E/CL0084_T2D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0084/CL0084_T2D_E/CL0084_T2D_E.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0084/CL0084_T2D_E/CL0084_T2D_E.summ.json.gz
+    jobid: 34
+    wildcards: patient=CL0084, sample=CL0084_T2D_E
+
+[Mon Jan  7 14:26:03 2019]
+Finished job 34.
+3 of 10 steps (30%) done
+
+[Mon Jan  7 14:26:03 2019]
+rule move_and_unzip_files:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0084/CL0084_T1D_E2/CL0084_T1D_E2.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0084/CL0084_T1D_E2/CL0084_T1D_E2.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0084/CL0084_T1D_E2/CL0084_T1D_E2.summ.json.gz
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0084/CL0084_T1D_E2.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0084/CL0084_T1D_E2.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0084/CL0084_T1D_E2.summ.json
+    jobid: 26
+    wildcards: patient=CL0084, sample=CL0084_T1D_E2
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /spin1/users/browna6/pwgs_snakemake/.snakemake/log/2019-01-07T142427.564483.snakemake.log

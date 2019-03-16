@@ -1,0 +1,130 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 10
+Job counts:
+	count	jobs
+	1	all
+	6	move_and_unzip_files
+	1	submit_pwgs
+	1	write_pwgs_results
+	9
+
+[Fri Jan  4 16:59:28 2019]
+rule submit_pwgs:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0039/CL0039_T1D_E.params.json, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0039/CL0039_T1D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0039/CL0039_T1D_E.ssm.txt
+    output: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0039/CL0039_T1D_E/trees.zip
+    jobid: 14
+    reason: Missing output files: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0039/CL0039_T1D_E/trees.zip
+    wildcards: patient=CL0039, sample=CL0039_T1D_E
+    threads: 4
+
+python2 /home/browna6/phylowgs/multievolve.py -O /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0039/CL0039_T1D_E -r 20294 20295 20296 20297 --num-chains 4 --ssms /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0039/CL0039_T1D_E.ssm.txt --cnvs /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0039/CL0039_T1D_E.cnvs.txt --params /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0039/CL0039_T1D_E.params.json
+Submitted job 14 with external jobid '17141168'.
+
+[Fri Jan  4 16:59:29 2019]
+rule move_and_unzip_files:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0040/CL0040_T3D_E/CL0040_T3D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0040/CL0040_T3D_E/CL0040_T3D_E.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0040/CL0040_T3D_E/CL0040_T3D_E.summ.json.gz
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T3D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T3D_E.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T3D_E.summ.json
+    jobid: 3
+    reason: Missing output files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T3D_E.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T3D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T3D_E.summ.json
+    wildcards: patient=CL0040, sample=CL0040_T3D_E
+
+Submitted job 3 with external jobid '17141170'.
+
+[Fri Jan  4 16:59:30 2019]
+rule move_and_unzip_files:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0038/CL0038_T2D_E/CL0038_T2D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0038/CL0038_T2D_E/CL0038_T2D_E.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0038/CL0038_T2D_E/CL0038_T2D_E.summ.json.gz
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T2D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T2D_E.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T2D_E.summ.json
+    jobid: 4
+    reason: Missing output files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T2D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T2D_E.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T2D_E.summ.json
+    wildcards: patient=CL0038, sample=CL0038_T2D_E
+
+Submitted job 4 with external jobid '17141172'.
+
+[Fri Jan  4 16:59:31 2019]
+rule move_and_unzip_files:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0038/CL0038_T1D_E/CL0038_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0038/CL0038_T1D_E/CL0038_T1D_E.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0038/CL0038_T1D_E/CL0038_T1D_E.summ.json.gz
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T1D_E.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T1D_E.summ.json
+    jobid: 5
+    reason: Missing output files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T1D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T1D_E.muts.json
+    wildcards: patient=CL0038, sample=CL0038_T1D_E
+
+Submitted job 5 with external jobid '17141174'.
+
+[Fri Jan  4 16:59:33 2019]
+rule move_and_unzip_files:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0040/CL0040_T1D_E/CL0040_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0040/CL0040_T1D_E/CL0040_T1D_E.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0040/CL0040_T1D_E/CL0040_T1D_E.summ.json.gz
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T1D_E.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T1D_E.summ.json
+    jobid: 6
+    reason: Missing output files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T1D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T1D_E.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T1D_E.mutass.zip
+    wildcards: patient=CL0040, sample=CL0040_T1D_E
+
+Submitted job 6 with external jobid '17141176'.
+
+[Fri Jan  4 16:59:34 2019]
+rule move_and_unzip_files:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0038/CL0038_T3D_E/CL0038_T3D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0038/CL0038_T3D_E/CL0038_T3D_E.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0038/CL0038_T3D_E/CL0038_T3D_E.summ.json.gz
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T3D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T3D_E.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T3D_E.summ.json
+    jobid: 1
+    reason: Missing output files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T3D_E.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T3D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T3D_E.mutass.zip
+    wildcards: patient=CL0038, sample=CL0038_T3D_E
+
+Submitted job 1 with external jobid '17141178'.
+[Fri Jan  4 17:01:28 2019]
+Error in rule move_and_unzip_files:
+    jobid: 3
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T3D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T3D_E.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T3D_E.summ.json
+    cluster_jobid: 17141170
+
+Job failed, going on with independent jobs.
+[Fri Jan  4 17:01:28 2019]
+Error in rule move_and_unzip_files:
+    jobid: 4
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T2D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T2D_E.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T2D_E.summ.json
+    cluster_jobid: 17141172
+
+Job failed, going on with independent jobs.
+[Fri Jan  4 17:01:28 2019]
+Error in rule move_and_unzip_files:
+    jobid: 5
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T1D_E.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T1D_E.summ.json
+    cluster_jobid: 17141174
+
+Job failed, going on with independent jobs.
+[Fri Jan  4 17:01:28 2019]
+Error in rule move_and_unzip_files:
+    jobid: 6
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T1D_E.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0040/CL0040_T1D_E.summ.json
+    cluster_jobid: 17141176
+
+Job failed, going on with independent jobs.
+[Fri Jan  4 17:01:28 2019]
+Error in rule move_and_unzip_files:
+    jobid: 1
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T3D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T3D_E.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T3D_E.summ.json
+    cluster_jobid: 17141178
+
+Job failed, going on with independent jobs.
+[Fri Jan  4 17:40:00 2019]
+Finished job 14.
+1 of 9 steps (11%) done
+
+[Fri Jan  4 17:40:00 2019]
+rule write_pwgs_results:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0039/CL0039_T1D_E/trees.zip
+    output: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0039/CL0039_T1D_E/CL0039_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0039/CL0039_T1D_E/CL0039_T1D_E.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0039/CL0039_T1D_E/CL0039_T1D_E.summ.json.gz
+    jobid: 8
+    reason: Missing output files: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0039/CL0039_T1D_E/CL0039_T1D_E.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0039/CL0039_T1D_E/CL0039_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0039/CL0039_T1D_E/CL0039_T1D_E.summ.json.gz; Input files updated by another job: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0039/CL0039_T1D_E/trees.zip
+    wildcards: patient=CL0039, sample=CL0039_T1D_E
+
+python2 /home/browna6/phylowgs/write_results.py CL0039_T1D_E /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0039/CL0039_T1D_E/trees.zip /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0039/CL0039_T1D_E/CL0039_T1D_E.summ.json.gz /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0039/CL0039_T1D_E/CL0039_T1D_E.muts.json.gz /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0039/CL0039_T1D_E/CL0039_T1D_E.mutass.zip
+Submitted job 8 with external jobid '17145028'.
+[Fri Jan  4 17:42:00 2019]
+Error in rule write_pwgs_results:
+    jobid: 8
+    output: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0039/CL0039_T1D_E/CL0039_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0039/CL0039_T1D_E/CL0039_T1D_E.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0039/CL0039_T1D_E/CL0039_T1D_E.summ.json.gz
+    cluster_jobid: 17145028
+
+Job failed, going on with independent jobs.
+Exiting because a job execution failed. Look above for error message
+Complete log: /spin1/users/browna6/pwgs_snakemake/.snakemake/log/2019-01-04T165927.231198.snakemake.log

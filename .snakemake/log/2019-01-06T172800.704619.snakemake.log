@@ -1,0 +1,74 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	5	run_final_parser
+	6
+
+[Sun Jan  6 17:28:01 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0038/CL0038_T1D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0038/CL0038_T1D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0038/CL0038_T1D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0038/CL0038_T1D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/CL0038/CL0038_T1D_E/tree_likelihoods.txt
+    jobid: 3
+    wildcards: patient=CL0038, sample=CL0038_T1D_E
+
+[Sun Jan  6 17:28:06 2019]
+Finished job 3.
+1 of 6 steps (17%) done
+
+[Sun Jan  6 17:28:06 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0038/CL0038_T2D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0038/CL0038_T2D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0038/CL0038_T2D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0038/CL0038_T2D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/CL0038/CL0038_T2D_E/tree_likelihoods.txt
+    jobid: 1
+    wildcards: patient=CL0038, sample=CL0038_T2D_E
+
+[Sun Jan  6 17:28:10 2019]
+Finished job 1.
+2 of 6 steps (33%) done
+
+[Sun Jan  6 17:28:10 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0038/CL0038_T3D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0038/CL0038_T3D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0038/CL0038_T3D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0038/CL0038_T3D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/CL0038/CL0038_T3D_E/tree_likelihoods.txt
+    jobid: 5
+    wildcards: patient=CL0038, sample=CL0038_T3D_E
+
+[Sun Jan  6 17:28:14 2019]
+Finished job 5.
+3 of 6 steps (50%) done
+
+[Sun Jan  6 17:28:14 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0040/CL0040_T3D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0040/CL0040_T3D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0040/CL0040_T3D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0040/CL0040_T3D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/CL0040/CL0040_T3D_E/tree_likelihoods.txt
+    jobid: 2
+    wildcards: patient=CL0040, sample=CL0040_T3D_E
+
+[Sun Jan  6 17:28:18 2019]
+Finished job 2.
+4 of 6 steps (67%) done
+
+[Sun Jan  6 17:28:18 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0040/CL0040_T1D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0040/CL0040_T1D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0040/CL0040_T1D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0040/CL0040_T1D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/CL0040/CL0040_T1D_E/tree_likelihoods.txt
+    jobid: 4
+    wildcards: patient=CL0040, sample=CL0040_T1D_E
+
+[Sun Jan  6 17:28:21 2019]
+Finished job 4.
+5 of 6 steps (83%) done
+
+[Sun Jan  6 17:28:21 2019]
+localrule all:
+    input: /data/browna6/evolution/pwgs/phyloresults_parsed/CL0038/CL0038_T1D_E/tree_likelihoods.txt, /data/browna6/evolution/pwgs/phyloresults_parsed/CL0038/CL0038_T2D_E/tree_likelihoods.txt, /data/browna6/evolution/pwgs/phyloresults_parsed/CL0038/CL0038_T3D_E/tree_likelihoods.txt, /data/browna6/evolution/pwgs/phyloresults_parsed/CL0040/CL0040_T1D_E/tree_likelihoods.txt, /data/browna6/evolution/pwgs/phyloresults_parsed/CL0040/CL0040_T3D_E/tree_likelihoods.txt
+    jobid: 0
+
+[Sun Jan  6 17:28:21 2019]
+Finished job 0.
+6 of 6 steps (100%) done
+Complete log: /spin1/users/browna6/pwgs_snakemake/.snakemake/log/2019-01-06T172800.704619.snakemake.log

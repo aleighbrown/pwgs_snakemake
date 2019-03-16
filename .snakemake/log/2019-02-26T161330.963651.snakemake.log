@@ -1,0 +1,144 @@
+Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
+Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
+Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 10
+Job counts:
+	count	jobs
+	1	all
+	1	move_and_unzip_files
+	1	phylo_input_parsing
+	2	run_cnv_parsing
+	1	run_final_parser_ms
+	2	run_pretty_vcf
+	1	submit_pwgs
+	1	write_results
+	10
+
+[Tue Feb 26 16:13:31 2019]
+rule run_cnv_parsing:
+    input: /data/browna6/evolution/facets/egfr_exome/fitted/CL0040_T3D_E.snppile.csv.gz_fitted.csv
+    output: /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040_T3D_E_cnvInput.txt
+    jobid: 7
+    reason: Missing output files: /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040_T3D_E_cnvInput.txt
+    wildcards: patient=CL0040, sample=CL0040_T3D_E
+
+Submitted job 7 with external jobid '21230544'.
+
+[Tue Feb 26 16:13:33 2019]
+rule run_pretty_vcf:
+    input: /data/GuhaData/LAT/strelka_raw_vcf/CL0040_T3D_E/passed.somatic.snvs_indels_snpEff_on_exome_combined.txt
+    output: /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040_T3D_E.passed.somatic.snvs_indels_snpEff_on_exome_combined.vcf
+    jobid: 5
+    reason: Missing output files: /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040_T3D_E.passed.somatic.snvs_indels_snpEff_on_exome_combined.vcf
+    wildcards: sample=CL0040_T3D_E
+
+Submitted job 5 with external jobid '21230546'.
+
+[Tue Feb 26 16:13:35 2019]
+rule run_cnv_parsing:
+    input: /data/browna6/evolution/facets/egfr_exome/fitted/CL0040_T1D_E.snppile.csv.gz_fitted.csv
+    output: /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040_T1D_E_cnvInput.txt
+    jobid: 6
+    reason: Missing output files: /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040_T1D_E_cnvInput.txt; Updated input files: /data/browna6/evolution/facets/egfr_exome/fitted/CL0040_T1D_E.snppile.csv.gz_fitted.csv
+    wildcards: patient=CL0040, sample=CL0040_T1D_E
+
+Submitted job 6 with external jobid '21230549'.
+
+[Tue Feb 26 16:13:38 2019]
+rule run_pretty_vcf:
+    input: /data/GuhaData/LAT/strelka_raw_vcf/CL0040_T1D_E/passed.somatic.snvs_indels_snpEff_on_exome_combined.txt
+    output: /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040_T1D_E.passed.somatic.snvs_indels_snpEff_on_exome_combined.vcf
+    jobid: 4
+    reason: Missing output files: /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040_T1D_E.passed.somatic.snvs_indels_snpEff_on_exome_combined.vcf
+    wildcards: sample=CL0040_T1D_E
+
+Submitted job 4 with external jobid '21230551'.
+[Tue Feb 26 16:25:32 2019]
+Finished job 7.
+1 of 10 steps (10%) done
+[Tue Feb 26 16:25:32 2019]
+Finished job 5.
+2 of 10 steps (20%) done
+[Tue Feb 26 16:25:32 2019]
+Finished job 6.
+3 of 10 steps (30%) done
+[Tue Feb 26 16:25:32 2019]
+Finished job 4.
+4 of 10 steps (40%) done
+
+[Tue Feb 26 16:25:32 2019]
+rule phylo_input_parsing:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040_T1D_E.passed.somatic.snvs_indels_snpEff_on_exome_combined.vcf, /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040_T3D_E.passed.somatic.snvs_indels_snpEff_on_exome_combined.vcf, /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040_T1D_E_cnvInput.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040_T3D_E_cnvInput.txt
+    output: /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.params.json, /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.ssm.txt
+    jobid: 2
+    reason: Missing output files: /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.params.json, /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.ssm.txt; Input files updated by another job: /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040_T3D_E.passed.somatic.snvs_indels_snpEff_on_exome_combined.vcf, /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040_T1D_E_cnvInput.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040_T3D_E_cnvInput.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040_T1D_E.passed.somatic.snvs_indels_snpEff_on_exome_combined.vcf
+    wildcards: patient=CL0040
+
+python2 /data/browna6/pwgs_snakemake/create_phylowgs_inputs.py --regions all --cnvs CL0040_T1D_E=/data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040_T1D_E_cnvInput.txt --cnvs CL0040_T3D_E=/data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040_T3D_E_cnvInput.txt --output-cnvs /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.cnvs.txt --output-variants /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.ssm.txt --output-params /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.params.json --vcf-type CL0040_T1D_E=strelka_indelcombined --vcf-type CL0040_T3D_E=strelka_indelcombined CL0040_T1D_E=/data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040_T1D_E.passed.somatic.snvs_indels_snpEff_on_exome_combined.vcf CL0040_T3D_E=/data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040_T3D_E.passed.somatic.snvs_indels_snpEff_on_exome_combined.vcf
+Submitted job 2 with external jobid '21232068'.
+[Tue Feb 26 16:34:33 2019]
+Finished job 2.
+5 of 10 steps (50%) done
+
+[Tue Feb 26 16:34:33 2019]
+rule submit_pwgs:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.params.json, /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.ssm.txt
+    output: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_ms/CL0040/CL0040/trees.zip
+    jobid: 9
+    reason: Input files updated by another job: /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.params.json, /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.ssm.txt
+    wildcards: patient=CL0040, sample=CL0040
+    threads: 5
+
+python2 /home/browna6/phylowgs/multievolve.py -O /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_ms/CL0040/CL0040 -r 755 16 564 89 547 --num-chains 5 --ssms /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.ssm.txt --cnvs /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.cnvs.txt --params /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.params.json
+Submitted job 9 with external jobid '21233008'.
+[Tue Feb 26 16:44:33 2019]
+Finished job 9.
+6 of 10 steps (60%) done
+
+[Tue Feb 26 16:44:33 2019]
+rule write_results:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_ms/CL0040/CL0040/trees.zip
+    output: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_ms/CL0040/CL0040/CL0040.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_ms/CL0040/CL0040/CL0040.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_ms/CL0040/CL0040/CL0040.summ.json.gz
+    jobid: 8
+    reason: Input files updated by another job: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_ms/CL0040/CL0040/trees.zip
+    wildcards: patient=CL0040, sample=CL0040
+
+python2 /home/browna6/phylowgs/write_results.py --allow-polyclonal --include-polyclonal CL0040 /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_ms/CL0040/CL0040/trees.zip /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_ms/CL0040/CL0040/CL0040.summ.json.gz /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_ms/CL0040/CL0040/CL0040.muts.json.gz /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_ms/CL0040/CL0040/CL0040.mutass.zip
+Submitted job 8 with external jobid '21234278'.
+[Tue Feb 26 16:55:34 2019]
+Finished job 8.
+7 of 10 steps (70%) done
+
+[Tue Feb 26 16:55:34 2019]
+rule move_and_unzip_files:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_ms/CL0040/CL0040/CL0040.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_ms/CL0040/CL0040/CL0040.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_ms/CL0040/CL0040/CL0040.summ.json.gz
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data_edit/CL0040/CL0040.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data_edit/CL0040/CL0040.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data_edit/CL0040/CL0040.summ.json
+    jobid: 3
+    reason: Missing output files: /data/browna6/evolution/pwgs/pwgs_output/witness/data_edit/CL0040/CL0040.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data_edit/CL0040/CL0040.summ.json; Input files updated by another job: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_ms/CL0040/CL0040/CL0040.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_ms/CL0040/CL0040/CL0040.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_ms/CL0040/CL0040/CL0040.summ.json.gz
+    wildcards: patient=CL0040, sample=CL0040
+
+Submitted job 3 with external jobid '21235267'.
+[Tue Feb 26 17:04:34 2019]
+Finished job 3.
+8 of 10 steps (80%) done
+
+[Tue Feb 26 17:04:34 2019]
+rule run_final_parser_ms:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data_edit/CL0040/CL0040.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data_edit/CL0040/CL0040.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed_ms_40_edit/CL0040/CL0040/tree_likelihoods.txt
+    jobid: 1
+    reason: Missing output files: /data/browna6/evolution/pwgs/phyloresults_parsed_ms_40_edit/CL0040/CL0040/tree_likelihoods.txt; Input files updated by another job: /data/browna6/evolution/pwgs/pwgs_output/witness/data_edit/CL0040/CL0040.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data_edit/CL0040/CL0040.mutass.zip, /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_CL40_edit/CL0040/CL0040.ssm.txt
+    wildcards: patient=CL0040, sample=CL0040
+
+Submitted job 1 with external jobid '21236188'.
+[Tue Feb 26 17:14:35 2019]
+Error in rule run_final_parser_ms:
+    jobid: 1
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed_ms_40_edit/CL0040/CL0040/tree_likelihoods.txt
+    cluster_jobid: 21236188
+
+Job failed, going on with independent jobs.
+Exiting because a job execution failed. Look above for error message
+Complete log: /spin1/users/browna6/pwgs_snakemake/.snakemake/log/2019-02-26T161330.963651.snakemake.log

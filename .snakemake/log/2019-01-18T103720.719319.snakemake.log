@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 18 of /spin1/users/browna6/pwgs_snakemake/deleteme.snakefile:
+Missing input files for rule run_pretty_vcf:
+/data/browna6/pwgs_snakemake/example/ppost_treat_combined_ssm.txt

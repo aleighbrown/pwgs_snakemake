@@ -1,0 +1,5 @@
+Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
+Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
+CreateRuleException in line 13 of /spin1/users/browna6/pwgs_snakemake/run_full_pipeline.snakefile:
+The name all is already used by another rule
+  File "/spin1/users/browna6/pwgs_snakemake/run_full_pipeline.snakefile", line 13, in <module>

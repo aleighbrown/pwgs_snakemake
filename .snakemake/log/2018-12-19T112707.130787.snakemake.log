@@ -1,0 +1,16 @@
+Building DAG of jobs...
+Job counts:
+	count	jobs
+	1	all
+	6	submit_pwgs
+	7
+
+[Wed Dec 19 11:27:07 2018]
+rule submit_pwgs:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0038/CL0038_T1D_E.params.json, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0038/CL0038_T1D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0038/CL0038_T1D_E.ssm.txt
+    output: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0038/CL0038_T1D_E/trees.zip
+    jobid: 1
+    wildcards: patient=CL0038, sample=CL0038_T1D_E
+
+RuleException in line 16 of /spin1/users/browna6/pwgs_snakemake/run_pwgs.snakefile:
+NameError: The name 'patient' is unknown in this context. Please make sure that you defined that variable. Also note that braces not used for variable access have to be escaped by repeating them, i.e. {{print $1}}

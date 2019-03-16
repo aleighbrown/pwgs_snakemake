@@ -1,0 +1,6 @@
+Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
+Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
+Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
+WorkflowError in line 24 of /spin1/users/browna6/pwgs_snakemake/dirty_run.snakefile:
+Duplicate output file pattern in rule all. First two duplicate for entries 0 and 1
+  File "/spin1/users/browna6/pwgs_snakemake/dirty_run.snakefile", line 24, in <module>

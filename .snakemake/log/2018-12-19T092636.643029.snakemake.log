@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 41 of /spin1/users/browna6/pwgs_snakemake/phyloWGSparsing.snakefile:
+Missing input files for rule phylo_input_parsing:
+CL0038_T3D_E.passed.somatic.snvs_indels_snpEff_on_exome_combined.vcf

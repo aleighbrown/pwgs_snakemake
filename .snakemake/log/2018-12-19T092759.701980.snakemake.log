@@ -1,0 +1,20 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	6	phylo_input_parsing
+	1	produce_phylo_input
+	7
+
+[Wed Dec 19 09:28:00 2018]
+rule phylo_input_parsing:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0038_T2D_E.passed.somatic.snvs_indels_snpEff_on_exome_combined.vcf, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0038/CL0038_T2D_E_cnvInput.txt
+    output: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0038/CL0038_T2D_E.params.json, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0038/CL0038_T2D_E.ssm.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0038/CL0038_T2D_E.cnvs.txt
+    jobid: 5
+    wildcards: patient=CL0038, sample=CL0038_T2D_E
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /spin1/users/browna6/pwgs_snakemake/.snakemake/log/2018-12-19T092759.701980.snakemake.log
