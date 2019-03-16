@@ -67,7 +67,7 @@ def makeVCFtypesParam(wildcard):
 
 def make_chains(n_chains):
     chain_string = ""
-    for i in n_chains:
+    for i in range(0,n_chains):
         chain_string += "-r " + str(random.randint(1,10000))
     return(chain_string)
 
