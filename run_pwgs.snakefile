@@ -32,6 +32,6 @@ rule submit_pwgs:
 	output:
 		config['outputdirPhyloOutput'] + "{patient}/{sample}/" + "trees.zip"
 	threads:
-		5
+		20
 	shell:
 		"python2 {params.pwgs_python_directory}multievolve.py -O {params.output_dir} {params.chain_starts} --num-chains {params.n_chains} --ssms {input.ssm_parsed} --cnvs {input.cnv_parsed} --params {input.params_json}"
