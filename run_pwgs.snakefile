@@ -28,14 +28,10 @@ rule submit_pwgs:
 		output_dir = config['outputdirPhyloOutput'] + "{patient}/{sample}",
 		pwgs_python_directory = config["pwgsPythonDir"],
 		n_chains = config["n_chains"],
-		r1 = random.randint(1,1000),
-		r2 = random.randint(1,1000),
-		r3 = random.randint(1,1000),
-		r4 = random.randint(1,1000),
-		r5 = random.randint(1,1000)
+		chain_starts = make_chains(config["n_chains"])
 	output:
 		config['outputdirPhyloOutput'] + "{patient}/{sample}/" + "trees.zip"
 	threads:
 		5
 	shell:
-		"python2 {params.pwgs_python_directory}multievolve.py -O {params.output_dir} -r {params.r1} {params.r2} {params.r3} {params.r4} {params.r5} --num-chains {params.n_chains} --ssms {input.ssm_parsed} --cnvs {input.cnv_parsed} --params {input.params_json}"
+		"python2 {params.pwgs_python_directory}multievolve.py -O {params.output_dir} -r {params.chain_starts} --num-chains {params.n_chains} --ssms {input.ssm_parsed} --cnvs {input.cnv_parsed} --params {input.params_json}"

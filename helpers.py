@@ -63,6 +63,14 @@ def makeVCFtypesParam(wildcard):
         cmd += ['--vcf-type', '%s=%s' % (samps[idx], s)]
     return(cmd)
 
+#this function generates a string of random numbers given the number of chains we want to run wtih
+
+def make_chains(n_chains):
+    chain_string = ""
+    for i in n_chains:
+        chain_string += "-r " + str(random.randint(1,10000))
+    return(chain_string)
+
 
 #this function is for taking our unique vcf input type, which is a combined Strelka file of both indels and point mutations, and writing it into something which the added class to the parser can read
 def writePrettyVCFs(wildcard, phyloInput, sample):
