@@ -34,4 +34,4 @@ rule submit_pwgs:
 	threads:
 		5
 	shell:
-		"python2 {params.pwgs_python_directory}multievolve.py -O {params.output_dir} -r {params.chain_starts} --num-chains {params.n_chains} --ssms {input.ssm_parsed} --cnvs {input.cnv_parsed} --params {input.params_json}"
+		"python2 {params.pwgs_python_directory}multievolve.py -O {params.output_dir} {params.chain_starts} --num-chains {params.n_chains} --ssms {input.ssm_parsed} --cnvs {input.cnv_parsed} --params {input.params_json}"
