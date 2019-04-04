@@ -1,0 +1,6 @@
+patient,sample,tumor_bam,normal_bam
+x,x1,pathto/x1.bam,pathto/normal.x1.bam
+x,x2,pathto/x2.bam,pathto/normal.x2.bam
+x,x3,pathto/x3.bam,pathto/normal.x3.bam
+y,y1,pathto/y1.bam,pathto/normal.y1.bam
+y,y2,pathto/y2.bam,pathto/normal.y2.bam
