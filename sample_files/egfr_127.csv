@@ -1,0 +1,3 @@
+﻿patient,sample,tumor_bam,tumor_bam,normal_bam,cnv_file_type,vcf_file,vcf_file_type,gender
+CL0127,CL0127_T1D_E,CL0127_T1D_E,/data/GuhaData/LAT/CL0127/20180130_OM17-115/CL0127_T1D_E/CL0127_T1D_E.bwa.final.bam,/data/GuhaData/LAT/CL0127/20180130_OM17-117/CL0127_N1D_E/CL0127_N1D_E.bwa.final.bam,facets,/data/GuhaData/LAT/strelka_raw_vcf/CL0127_T1D_E/passed.somatic.snvs_indels_snpEff_on_exome_combined.txt,strelka_indelcombined,Female
+CL0127,CL0127_T3D_E,CL0127_T3D_E,/data/GuhaData/LAT/CL0127/OM18-151/CL0127_T3D_E/CL0127_T3D_E.bwa.final.bam,/data/GuhaData/LAT/CL0127/20180130_OM17-117/CL0127_N1D_E/CL0127_N1D_E.bwa.final.bam,facets,/data/GuhaData/LAT/strelka_raw_vcf_missing/CL0127_T3D_E/passed.somatic.snvs_indels_snpEff_on_exome_combined.txt,strelka_indelcombined,Female
