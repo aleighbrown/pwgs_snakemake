@@ -1,5 +1,5 @@
 #this is the main csv which contains the important information for all the following steps, it should be formated as samples.csv example
-sampleCSVpath: /data/browna6/pwgs_snakemake/sample_files/egfr_NCI395_123.csv
+sampleCSVpath: /data/browna6/pwgs_snakemake/egfr_RA7_39.csv
 #sampleCSVpath: /data/browna6/evolution/egfr_samples copy.csv
 
 
@@ -17,18 +17,18 @@ snppilepath: ./snp-pileup
 
 ##PWGS pre-parsing
 #this is where the parsed data is going to go
-outputdirPhyloInput:  /data/GuhaData/pwgs/pwgs_inputs/NCI395_123/
+outputdirPhyloInput:  /data/GuhaData/pwgs/pwgs_inputs/RA7_39/
 #if you don't want subsampling leave as " ". if you want a sample leave as " -s ### " with the spaces
 subsampling: " "
 
 ##PWGS 
 #this is where pwgs is going to write the results of the multievolve.py script
-outputdirPhyloOutput: /data/GuhaData/pwgs/pwgs_output/NCI395_123/
+outputdirPhyloOutput: /data/GuhaData/pwgs/pwgs_output/RA7_39/
 #this is where all the PWGS python scripts are located
 pwgsPythonDir: /home/browna6/phylowgs/
 #this is the data directory of the Witness viewer, the bottom folder should always be /data/
 #a folder for each 'patient' or 'run', will be written here
-outputdirWitness: /data/GuhaData/phylowgs_results/witness/data_NCI395/
+outputdirWitness: /data/GuhaData/phylowgs_results/witness/data_RA7_39/
 #number of chains that it should be run with
 n_chains: 20
 ##multisample or single sample
@@ -36,7 +36,7 @@ multisample: True
 
 ##PWGS output parsing
 #final output folder for the parsed tree data of PWGS
-parsedOutputPWGS: /data/GuhaData/phylowgs_results/parsed_results/
+parsedOutputPWGS: /data/browna6/evolution/pwgs/phyloresults_parsed_editedCopy2/
 #how many of the top trees do you want to look at?
 k_trees: 30
 

@@ -1,2 +1,0 @@
-﻿patient,sample,tumor_bam,normal_bam,cnv_file_type,vcf_file,vcf_file_type,gender
-CL0039,CL0039_T1D_E,/data/GuhaData/LAT/CL0039/20170615/CL0039_T1D_E/CL0039_T1D_E.bwa.final.bam,/data/GuhaData/LAT/CL0039/20170912_SmartRNATrim2/CL0039_N2D_E/CL0039_N2D_E.bwa.final.bam,facets,/data/GuhaData/LAT/strelka_raw_vcf/CL0039_T1D_E/passed.somatic.snvs_indels_snpEff_on_exome_combined.txt,strelka_indelcombined,Male
