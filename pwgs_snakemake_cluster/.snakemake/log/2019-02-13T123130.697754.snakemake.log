@@ -1,0 +1,576 @@
+Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
+Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 10
+Job counts:
+	count	jobs
+	1	all
+	8	move_and_unzip_files
+	31	run_final_parser
+	2	submit_pwgs
+	4	write_results
+	46
+
+[Wed Feb 13 12:31:34 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/RA007/RA007_L4a.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/RA007/RA007_L4a.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_L4a.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_L4a.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/RA007/RA007_L4a/tree_likelihoods.txt
+    jobid: 53
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_L4a.mutass.zip
+    wildcards: patient=RA007, sample=RA007_L4a
+
+Submitted job 53 with external jobid '20286667'.
+
+[Wed Feb 13 12:31:35 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0395/NCI0395_T4D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0395/NCI0395_T4D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0395/NCI0395_T4D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0395/NCI0395_T4D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0395/NCI0395_T4D_E/tree_likelihoods.txt
+    jobid: 12
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0395/NCI0395_T4D_E.mutass.zip
+    wildcards: patient=NCI0395, sample=NCI0395_T4D_E
+
+Submitted job 12 with external jobid '20286669'.
+
+[Wed Feb 13 12:31:36 2019]
+rule write_results:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0401/NCI0401_T1D_E/trees.zip
+    output: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0401/NCI0401_T1D_E/NCI0401_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0401/NCI0401_T1D_E/NCI0401_T1D_E.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0401/NCI0401_T1D_E/NCI0401_T1D_E.summ.json.gz
+    jobid: 210
+    reason: Missing output files: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0401/NCI0401_T1D_E/NCI0401_T1D_E.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0401/NCI0401_T1D_E/NCI0401_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0401/NCI0401_T1D_E/NCI0401_T1D_E.summ.json.gz
+    wildcards: patient=NCI0401, sample=NCI0401_T1D_E
+
+python2 /home/browna6/phylowgs/write_results.py --allow-polyclonal --include-polyclonal NCI0401_T1D_E /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0401/NCI0401_T1D_E/trees.zip /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0401/NCI0401_T1D_E/NCI0401_T1D_E.summ.json.gz /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0401/NCI0401_T1D_E/NCI0401_T1D_E.muts.json.gz /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0401/NCI0401_T1D_E/NCI0401_T1D_E.mutass.zip
+Submitted job 210 with external jobid '20286670'.
+
+[Wed Feb 13 12:31:38 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_T3D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_T3D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_T3D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_T3D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0411/NCI0411_T3D_E/tree_likelihoods.txt
+    jobid: 25
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_T3D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_T3D_E.mutass.zip
+    wildcards: patient=NCI0411, sample=NCI0411_T3D_E
+
+Submitted job 25 with external jobid '20286682'.
+
+[Wed Feb 13 12:31:39 2019]
+rule write_results:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_3Met/trees.zip
+    output: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_3Met/NCI0411_3Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_3Met/NCI0411_3Met.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_3Met/NCI0411_3Met.summ.json.gz
+    jobid: 291
+    reason: Missing output files: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_3Met/NCI0411_3Met.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_3Met/NCI0411_3Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_3Met/NCI0411_3Met.summ.json.gz
+    wildcards: patient=NCI0411, sample=NCI0411_3Met
+
+python2 /home/browna6/phylowgs/write_results.py --allow-polyclonal --include-polyclonal NCI0411_3Met /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_3Met/trees.zip /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_3Met/NCI0411_3Met.summ.json.gz /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_3Met/NCI0411_3Met.muts.json.gz /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_3Met/NCI0411_3Met.mutass.zip
+Submitted job 291 with external jobid '20286684'.
+
+[Wed Feb 13 12:31:41 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_BMet.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_BMet.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_BMet.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_BMet.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0411/NCI0411_BMet/tree_likelihoods.txt
+    jobid: 46
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_BMet.mutass.zip
+    wildcards: patient=NCI0411, sample=NCI0411_BMet
+
+Submitted job 46 with external jobid '20286687'.
+
+[Wed Feb 13 12:31:42 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0402/NCI0402_T5D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0402/NCI0402_T5D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0402/NCI0402_T5D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0402/NCI0402_T5D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0402/NCI0402_T5D_E/tree_likelihoods.txt
+    jobid: 22
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0402/NCI0402_T5D_E.mutass.zip
+    wildcards: patient=NCI0402, sample=NCI0402_T5D_E
+
+Submitted job 22 with external jobid '20286690'.
+
+[Wed Feb 13 12:31:43 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_T2D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_T2D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_T2D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_T2D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0411/NCI0411_T2D_E/tree_likelihoods.txt
+    jobid: 24
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_T2D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_T2D_E.mutass.zip
+    wildcards: patient=NCI0411, sample=NCI0411_T2D_E
+
+Submitted job 24 with external jobid '20286692'.
+
+[Wed Feb 13 12:31:44 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0423/NCI0423_T1D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0423/NCI0423_T1D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0423/NCI0423_T1D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0423/NCI0423_T1D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0423/NCI0423_T1D_E/tree_likelihoods.txt
+    jobid: 32
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0423/NCI0423_T1D_E.mutass.zip
+    wildcards: patient=NCI0423, sample=NCI0423_T1D_E
+
+Submitted job 32 with external jobid '20286695'.
+
+[Wed Feb 13 12:31:46 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/RA007/RA007_Li1.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/RA007/RA007_Li1.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_Li1.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_Li1.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/RA007/RA007_Li1/tree_likelihoods.txt
+    jobid: 54
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_Li1.mutass.zip
+    wildcards: patient=RA007, sample=RA007_Li1
+
+Submitted job 54 with external jobid '20286697'.
+[Wed Feb 13 12:32:05 2019]
+Finished job 53.
+1 of 46 steps (2%) done
+
+[Wed Feb 13 12:32:05 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0404/NCI0404_T2D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0404/NCI0404_T2D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0404/NCI0404_T2D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0404/NCI0404_T2D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0404/NCI0404_T2D_E/tree_likelihoods.txt
+    jobid: 29
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0404/NCI0404_T2D_E.mutass.zip
+    wildcards: patient=NCI0404, sample=NCI0404_T2D_E
+
+[Wed Feb 13 12:32:05 2019]
+Finished job 12.
+2 of 46 steps (4%) done
+[Wed Feb 13 12:32:05 2019]
+Finished job 25.
+3 of 46 steps (7%) done
+[Wed Feb 13 12:32:05 2019]
+Finished job 22.
+4 of 46 steps (9%) done
+[Wed Feb 13 12:32:05 2019]
+Finished job 24.
+5 of 46 steps (11%) done
+Submitted job 29 with external jobid '20286714'.
+
+[Wed Feb 13 12:32:06 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0404/NCI0404_T1D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0404/NCI0404_T1D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0404/NCI0404_T1D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0404/NCI0404_T1D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0404/NCI0404_T1D_E/tree_likelihoods.txt
+    jobid: 28
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0404/NCI0404_T1D_E.mutass.zip
+    wildcards: patient=NCI0404, sample=NCI0404_T1D_E
+
+Submitted job 28 with external jobid '20286716'.
+
+[Wed Feb 13 12:32:07 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/RA007/RA007_L2b.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/RA007/RA007_L2b.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_L2b.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_L2b.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/RA007/RA007_L2b/tree_likelihoods.txt
+    jobid: 50
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_L2b.mutass.zip
+    wildcards: patient=RA007, sample=RA007_L2b
+
+Submitted job 50 with external jobid '20286718'.
+
+[Wed Feb 13 12:32:08 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/RA007/RA007_L2c.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/RA007/RA007_L2c.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_L2c.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_L2c.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/RA007/RA007_L2c/tree_likelihoods.txt
+    jobid: 51
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_L2c.mutass.zip
+    wildcards: patient=RA007, sample=RA007_L2c
+
+Submitted job 51 with external jobid '20286720'.
+
+[Wed Feb 13 12:32:10 2019]
+rule move_and_unzip_files:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_6Met/NCI0411_6Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_6Met/NCI0411_6Met.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_6Met/NCI0411_6Met.summ.json.gz
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_6Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_6Met.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_6Met.summ.json
+    jobid: 145
+    reason: Missing output files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_6Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_6Met.summ.json
+    wildcards: patient=NCI0411, sample=NCI0411_6Met
+
+Submitted job 145 with external jobid '20286722'.
+Waiting at most 120 seconds for missing files.
+[Wed Feb 13 12:32:32 2019]
+Finished job 210.
+6 of 46 steps (13%) done
+
+[Wed Feb 13 12:32:32 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/RA007/RA007_A1.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/RA007/RA007_A1.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_A1.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_A1.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/RA007/RA007_A1/tree_likelihoods.txt
+    jobid: 48
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_A1.mutass.zip
+    wildcards: patient=RA007, sample=RA007_A1
+
+[Wed Feb 13 12:32:32 2019]
+Finished job 46.
+7 of 46 steps (15%) done
+[Wed Feb 13 12:32:32 2019]
+Finished job 54.
+8 of 46 steps (17%) done
+Waiting at most 120 seconds for missing files.
+Submitted job 48 with external jobid '20286727'.
+[Wed Feb 13 12:32:35 2019]
+Finished job 29.
+9 of 46 steps (20%) done
+Waiting at most 120 seconds for missing files.
+
+[Wed Feb 13 12:32:35 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0402/NCI0402_T3D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0402/NCI0402_T3D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0402/NCI0402_T3D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0402/NCI0402_T3D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0402/NCI0402_T3D_E/tree_likelihoods.txt
+    jobid: 20
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0402/NCI0402_T3D_E.mutass.zip
+    wildcards: patient=NCI0402, sample=NCI0402_T3D_E
+
+Submitted job 20 with external jobid '20286728'.
+
+[Wed Feb 13 12:32:36 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/RA007/RA007_B2a.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/RA007/RA007_B2a.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_B2a.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_B2a.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/RA007/RA007_B2a/tree_likelihoods.txt
+    jobid: 49
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_B2a.mutass.zip
+    wildcards: patient=RA007, sample=RA007_B2a
+
+[Wed Feb 13 12:32:37 2019]
+Finished job 28.
+10 of 46 steps (22%) done
+Waiting at most 120 seconds for missing files.
+Submitted job 49 with external jobid '20286729'.
+
+[Wed Feb 13 12:32:37 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_CMet.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_CMet.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_CMet.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_CMet.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0411/NCI0411_CMet/tree_likelihoods.txt
+    jobid: 47
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_CMet.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_CMet.summ.json
+    wildcards: patient=NCI0411, sample=NCI0411_CMet
+
+[Wed Feb 13 12:32:38 2019]
+Finished job 50.
+11 of 46 steps (24%) done
+Waiting at most 120 seconds for missing files.
+Submitted job 47 with external jobid '20286730'.
+[Wed Feb 13 12:32:39 2019]
+Finished job 51.
+12 of 46 steps (26%) done
+
+[Wed Feb 13 12:32:39 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0402/NCI0402_T1D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0402/NCI0402_T1D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0402/NCI0402_T1D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0402/NCI0402_T1D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0402/NCI0402_T1D_E/tree_likelihoods.txt
+    jobid: 18
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0402/NCI0402_T1D_E.mutass.zip
+    wildcards: patient=NCI0402, sample=NCI0402_T1D_E
+
+[Wed Feb 13 12:32:39 2019]
+Finished job 145.
+13 of 46 steps (28%) done
+Submitted job 18 with external jobid '20286731'.
+
+[Wed Feb 13 12:32:40 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_T1D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_T1D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_T1D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_T1D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0411/NCI0411_T1D_E/tree_likelihoods.txt
+    jobid: 23
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_T1D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_T1D_E.mutass.zip
+    wildcards: patient=NCI0411, sample=NCI0411_T1D_E
+
+Submitted job 23 with external jobid '20286732'.
+
+[Wed Feb 13 12:32:41 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0127/CL0127_T1D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0127/CL0127_T1D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0127/CL0127_T1D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0127/CL0127_T1D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/CL0127/CL0127_T1D_E/tree_likelihoods.txt
+    jobid: 36
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0127/CL0127_T1D_E.mutass.zip
+    wildcards: patient=CL0127, sample=CL0127_T1D_E
+
+Submitted job 36 with external jobid '20286733'.
+
+[Wed Feb 13 12:32:43 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_6Met.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_6Met.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_6Met.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_6Met.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0411/NCI0411_6Met/tree_likelihoods.txt
+    jobid: 45
+    reason: Missing output files: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0411/NCI0411_6Met/tree_likelihoods.txt; Input files updated by another job: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_6Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_6Met.summ.json
+    wildcards: patient=NCI0411, sample=NCI0411_6Met
+
+Submitted job 45 with external jobid '20286734'.
+Waiting at most 120 seconds for missing files.
+[Wed Feb 13 12:33:07 2019]
+Finished job 49.
+14 of 46 steps (30%) done
+
+Waiting at most 120 seconds for missing files.
+[Wed Feb 13 12:33:07 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0402/NCI0402_T2D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0402/NCI0402_T2D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0402/NCI0402_T2D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0402/NCI0402_T2D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0402/NCI0402_T2D_E/tree_likelihoods.txt
+    jobid: 19
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0402/NCI0402_T2D_E.mutass.zip
+    wildcards: patient=NCI0402, sample=NCI0402_T2D_E
+
+[Wed Feb 13 12:33:08 2019]
+Finished job 47.
+15 of 46 steps (33%) done
+[Wed Feb 13 12:33:08 2019]
+Finished job 32.
+16 of 46 steps (35%) done
+Waiting at most 120 seconds for missing files.
+Submitted job 19 with external jobid '20286736'.
+[Wed Feb 13 12:33:09 2019]
+Finished job 18.
+17 of 46 steps (37%) done
+Waiting at most 120 seconds for missing files.
+
+[Wed Feb 13 12:33:09 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0395/NCI0395_T2D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0395/NCI0395_T2D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0395/NCI0395_T2D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0395/NCI0395_T2D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0395/NCI0395_T2D_E/tree_likelihoods.txt
+    jobid: 10
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0395/NCI0395_T2D_E.mutass.zip
+    wildcards: patient=NCI0395, sample=NCI0395_T2D_E
+
+Submitted job 10 with external jobid '20286737'.
+
+[Wed Feb 13 12:33:10 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0395/NCI0395_T5D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0395/NCI0395_T5D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0395/NCI0395_T5D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0395/NCI0395_T5D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0395/NCI0395_T5D_E/tree_likelihoods.txt
+    jobid: 13
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0395/NCI0395_T5D_E.mutass.zip
+    wildcards: patient=NCI0395, sample=NCI0395_T5D_E
+
+[Wed Feb 13 12:33:11 2019]
+Finished job 23.
+18 of 46 steps (39%) done
+Waiting at most 120 seconds for missing files.
+Submitted job 13 with external jobid '20286738'.
+
+[Wed Feb 13 12:33:11 2019]
+rule move_and_unzip_files:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_2Met/NCI0411_2Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_2Met/NCI0411_2Met.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_2Met/NCI0411_2Met.summ.json.gz
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_2Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_2Met.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_2Met.summ.json
+    jobid: 137
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_2Met/NCI0411_2Met.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_2Met/NCI0411_2Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_2Met/NCI0411_2Met.summ.json.gz
+    wildcards: patient=NCI0411, sample=NCI0411_2Met
+
+[Wed Feb 13 12:33:12 2019]
+Finished job 36.
+19 of 46 steps (41%) done
+Waiting at most 120 seconds for missing files.
+Submitted job 137 with external jobid '20286739'.
+[Wed Feb 13 12:33:32 2019]
+Finished job 45.
+20 of 46 steps (43%) done
+
+[Wed Feb 13 12:33:32 2019]
+rule move_and_unzip_files:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0088/CL0088_T2D_E/CL0088_T2D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0088/CL0088_T2D_E/CL0088_T2D_E.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0088/CL0088_T2D_E/CL0088_T2D_E.summ.json.gz
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0088/CL0088_T2D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0088/CL0088_T2D_E.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0088/CL0088_T2D_E.summ.json
+    jobid: 109
+    reason: Missing output files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0088/CL0088_T2D_E.summ.json
+    wildcards: patient=CL0088, sample=CL0088_T2D_E
+
+Submitted job 109 with external jobid '20286742'.
+
+[Wed Feb 13 12:33:33 2019]
+rule move_and_unzip_files:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/RA007/RA007_LN1/RA007_LN1.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/RA007/RA007_LN1/RA007_LN1.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/RA007/RA007_LN1/RA007_LN1.summ.json.gz
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_LN1.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_LN1.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_LN1.summ.json
+    jobid: 165
+    reason: Missing output files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_LN1.summ.json
+    wildcards: patient=RA007, sample=RA007_LN1
+
+Submitted job 165 with external jobid '20286743'.
+
+[Wed Feb 13 12:33:35 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0395/NCI0395_T1D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0395/NCI0395_T1D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0395/NCI0395_T1D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0395/NCI0395_T1D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0395/NCI0395_T1D_E/tree_likelihoods.txt
+    jobid: 9
+    reason: Updated input files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0395/NCI0395_T1D_E.mutass.zip
+    wildcards: patient=NCI0395, sample=NCI0395_T1D_E
+
+Submitted job 9 with external jobid '20286744'.
+[Wed Feb 13 12:33:42 2019]
+Finished job 19.
+21 of 46 steps (46%) done
+
+[Wed Feb 13 12:33:42 2019]
+rule move_and_unzip_files:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0401/NCI0401_T1D_E/NCI0401_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0401/NCI0401_T1D_E/NCI0401_T1D_E.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0401/NCI0401_T1D_E/NCI0401_T1D_E.summ.json.gz
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0401/NCI0401_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0401/NCI0401_T1D_E.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0401/NCI0401_T1D_E.summ.json
+    jobid: 85
+    reason: Missing output files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0401/NCI0401_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0401/NCI0401_T1D_E.summ.json; Input files updated by another job: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0401/NCI0401_T1D_E/NCI0401_T1D_E.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0401/NCI0401_T1D_E/NCI0401_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0401/NCI0401_T1D_E/NCI0401_T1D_E.summ.json.gz
+    wildcards: patient=NCI0401, sample=NCI0401_T1D_E
+
+[Wed Feb 13 12:33:42 2019]
+Finished job 10.
+22 of 46 steps (48%) done
+[Wed Feb 13 12:33:42 2019]
+Finished job 13.
+23 of 46 steps (50%) done
+[Wed Feb 13 12:33:42 2019]
+Finished job 137.
+24 of 46 steps (52%) done
+[Wed Feb 13 12:33:42 2019]
+Finished job 48.
+25 of 46 steps (54%) done
+[Wed Feb 13 12:33:42 2019]
+Finished job 20.
+26 of 46 steps (57%) done
+Submitted job 85 with external jobid '20286745'.
+
+[Wed Feb 13 12:33:43 2019]
+rule submit_pwgs:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_4Met.params.json, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_4Met.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_4Met.ssm.txt
+    output: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_4Met/trees.zip
+    jobid: 373
+    reason: Missing output files: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_4Met/trees.zip
+    wildcards: patient=NCI0411, sample=NCI0411_4Met
+    threads: 5
+
+python2 /home/browna6/phylowgs/multievolve.py -O /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_4Met -r 883 85 22 395 865 --num-chains 5 --ssms /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_4Met.ssm.txt --cnvs /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_4Met.cnvs.txt --params /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_4Met.params.json
+Submitted job 373 with external jobid '20286755'.
+
+[Wed Feb 13 12:33:45 2019]
+rule submit_pwgs:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_1Met.params.json, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_1Met.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_1Met.ssm.txt
+    output: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_1Met/trees.zip
+    jobid: 370
+    reason: Missing output files: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_1Met/trees.zip
+    wildcards: patient=NCI0411, sample=NCI0411_1Met
+    threads: 5
+
+python2 /home/browna6/phylowgs/multievolve.py -O /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_1Met -r 883 85 22 395 865 --num-chains 5 --ssms /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_1Met.ssm.txt --cnvs /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_1Met.cnvs.txt --params /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_1Met.params.json
+Submitted job 370 with external jobid '20286756'.
+
+[Wed Feb 13 12:33:46 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_2Met.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_2Met.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_2Met.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_2Met.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0411/NCI0411_2Met/tree_likelihoods.txt
+    jobid: 41
+    reason: Missing output files: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0411/NCI0411_2Met/tree_likelihoods.txt; Input files updated by another job: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_2Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_2Met.summ.json
+    wildcards: patient=NCI0411, sample=NCI0411_2Met
+
+Submitted job 41 with external jobid '20286757'.
+Waiting at most 120 seconds for missing files.
+[Wed Feb 13 12:34:42 2019]
+Finished job 85.
+27 of 46 steps (59%) done
+
+[Wed Feb 13 12:34:42 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0401/NCI0401_T1D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0401/NCI0401_T1D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0401/NCI0401_T1D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0401/NCI0401_T1D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0401/NCI0401_T1D_E/tree_likelihoods.txt
+    jobid: 15
+    reason: Missing output files: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0401/NCI0401_T1D_E/tree_likelihoods.txt; Input files updated by another job: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0401/NCI0401_T1D_E.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0401/NCI0401_T1D_E.summ.json
+    wildcards: patient=NCI0401, sample=NCI0401_T1D_E
+
+[Wed Feb 13 12:34:42 2019]
+Finished job 41.
+28 of 46 steps (61%) done
+Submitted job 15 with external jobid '20286767'.
+[Wed Feb 13 12:34:52 2019]
+Finished job 109.
+29 of 46 steps (63%) done
+[Wed Feb 13 12:34:52 2019]
+Finished job 165.
+30 of 46 steps (65%) done
+
+[Wed Feb 13 12:34:52 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0088/CL0088_T2D_E.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0088/CL0088_T2D_E.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0088/CL0088_T2D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0088/CL0088_T2D_E.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/CL0088/CL0088_T2D_E/tree_likelihoods.txt
+    jobid: 27
+    reason: Missing output files: /data/browna6/evolution/pwgs/phyloresults_parsed/CL0088/CL0088_T2D_E/tree_likelihoods.txt; Input files updated by another job: /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0088/CL0088_T2D_E.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/CL0088/CL0088_T2D_E.mutass.zip
+    wildcards: patient=CL0088, sample=CL0088_T2D_E
+
+[Wed Feb 13 12:34:52 2019]
+Finished job 9.
+31 of 46 steps (67%) done
+Submitted job 27 with external jobid '20286772'.
+
+[Wed Feb 13 12:34:55 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/RA007/RA007_LN1.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/RA007/RA007_LN1.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_LN1.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_LN1.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/RA007/RA007_LN1/tree_likelihoods.txt
+    jobid: 55
+    reason: Missing output files: /data/browna6/evolution/pwgs/phyloresults_parsed/RA007/RA007_LN1/tree_likelihoods.txt; Input files updated by another job: /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_LN1.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/RA007/RA007_LN1.summ.json
+    wildcards: patient=RA007, sample=RA007_LN1
+
+Submitted job 55 with external jobid '20286775'.
+Waiting at most 120 seconds for missing files.
+[Wed Feb 13 12:35:42 2019]
+Finished job 15.
+32 of 46 steps (70%) done
+[Wed Feb 13 12:35:42 2019]
+Finished job 27.
+33 of 46 steps (72%) done
+[Wed Feb 13 12:37:22 2019]
+Finished job 55.
+34 of 46 steps (74%) done
+[Wed Feb 13 13:01:54 2019]
+Finished job 291.
+35 of 46 steps (76%) done
+
+[Wed Feb 13 13:01:54 2019]
+rule move_and_unzip_files:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_3Met/NCI0411_3Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_3Met/NCI0411_3Met.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_3Met/NCI0411_3Met.summ.json.gz
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_3Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_3Met.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_3Met.summ.json
+    jobid: 139
+    reason: Missing output files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_3Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_3Met.summ.json; Input files updated by another job: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_3Met/NCI0411_3Met.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_3Met/NCI0411_3Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_3Met/NCI0411_3Met.summ.json.gz
+    wildcards: patient=NCI0411, sample=NCI0411_3Met
+
+Submitted job 139 with external jobid '20289148'.
+[Wed Feb 13 13:04:54 2019]
+Finished job 139.
+36 of 46 steps (78%) done
+
+[Wed Feb 13 13:04:54 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_3Met.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_3Met.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_3Met.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_3Met.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0411/NCI0411_3Met/tree_likelihoods.txt
+    jobid: 42
+    reason: Missing output files: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0411/NCI0411_3Met/tree_likelihoods.txt; Input files updated by another job: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_3Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_3Met.summ.json
+    wildcards: patient=NCI0411, sample=NCI0411_3Met
+
+Submitted job 42 with external jobid '20289414'.
+[Wed Feb 13 13:06:54 2019]
+Finished job 42.
+37 of 46 steps (80%) done
+[Wed Feb 13 16:08:43 2019]
+Finished job 373.
+38 of 46 steps (83%) done
+
+[Wed Feb 13 16:08:43 2019]
+rule write_results:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_4Met/trees.zip
+    output: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_4Met/NCI0411_4Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_4Met/NCI0411_4Met.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_4Met/NCI0411_4Met.summ.json.gz
+    jobid: 294
+    reason: Missing output files: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_4Met/NCI0411_4Met.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_4Met/NCI0411_4Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_4Met/NCI0411_4Met.summ.json.gz; Input files updated by another job: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_4Met/trees.zip
+    wildcards: patient=NCI0411, sample=NCI0411_4Met
+
+python2 /home/browna6/phylowgs/write_results.py --allow-polyclonal --include-polyclonal NCI0411_4Met /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_4Met/trees.zip /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_4Met/NCI0411_4Met.summ.json.gz /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_4Met/NCI0411_4Met.muts.json.gz /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_4Met/NCI0411_4Met.mutass.zip
+Submitted job 294 with external jobid '20310228'.
+[Wed Feb 13 17:01:47 2019]
+Finished job 294.
+39 of 46 steps (85%) done
+
+[Wed Feb 13 17:01:47 2019]
+rule move_and_unzip_files:
+    input: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_4Met/NCI0411_4Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_4Met/NCI0411_4Met.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_4Met/NCI0411_4Met.summ.json.gz
+    output: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_4Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_4Met.muts.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_4Met.summ.json
+    jobid: 141
+    reason: Missing output files: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_4Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_4Met.summ.json; Input files updated by another job: /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_4Met/NCI0411_4Met.muts.json.gz, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_4Met/NCI0411_4Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/NCI0411/NCI0411_4Met/NCI0411_4Met.summ.json.gz
+    wildcards: patient=NCI0411, sample=NCI0411_4Met
+
+Submitted job 141 with external jobid '20318038'.
+[Wed Feb 13 17:13:48 2019]
+Finished job 141.
+40 of 46 steps (87%) done
+
+[Wed Feb 13 17:13:48 2019]
+rule run_final_parser:
+    input: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_4Met.cnvs.txt, /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411/NCI0411_4Met.ssm.txt, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_4Met.summ.json, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_4Met.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0411/NCI0411_4Met/tree_likelihoods.txt
+    jobid: 43
+    reason: Missing output files: /data/browna6/evolution/pwgs/phyloresults_parsed/NCI0411/NCI0411_4Met/tree_likelihoods.txt; Input files updated by another job: /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_4Met.mutass.zip, /data/browna6/evolution/pwgs/pwgs_output/witness/data/NCI0411/NCI0411_4Met.summ.json
+    wildcards: patient=NCI0411, sample=NCI0411_4Met
+
+Submitted job 43 with external jobid '20318979'.
+[Wed Feb 13 17:29:50 2019]
+Finished job 43.
+41 of 46 steps (89%) done

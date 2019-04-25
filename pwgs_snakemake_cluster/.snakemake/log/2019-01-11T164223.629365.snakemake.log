@@ -1,0 +1,105 @@
+Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
+Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	46	move_and_unzip_files
+	46	phylo_input_parsing
+	16	run_cnv_parsing
+	46	run_final_parser
+	46	run_pretty_vcf
+	46	submit_pwgs
+	46	write_results
+	293
+
+[Fri Jan 11 16:42:25 2019]
+rule run_pretty_vcf:
+    input: /data/GuhaData/LAT/strelka_raw_vcf/NCI0423_T1D_E/passed.somatic.snvs_indels_snpEff_on_exome_combined.txt
+    output: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0423_T1D_E.passed.somatic.snvs_indels_snpEff_on_exome_combined.vcf
+    jobid: 259
+    wildcards: sample=NCI0423_T1D_E
+
+[Fri Jan 11 16:42:26 2019]
+Finished job 259.
+1 of 293 steps (0.34%) done
+
+[Fri Jan 11 16:42:26 2019]
+rule run_pretty_vcf:
+    input: /data/GuhaData/LAT/strelka_raw_vcf_missing/NCI0402_T5D_E/passed.somatic.snvs_indels_snpEff_on_exome_combined.txt
+    output: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0402_T5D_E.passed.somatic.snvs_indels_snpEff_on_exome_combined.vcf
+    jobid: 229
+    wildcards: sample=NCI0402_T5D_E
+
+[Fri Jan 11 16:42:27 2019]
+Finished job 229.
+2 of 293 steps (0.68%) done
+
+[Fri Jan 11 16:42:27 2019]
+rule run_pretty_vcf:
+    input: /data/GuhaData/LAT/strelka_raw_vcf_missing/4292A-1Met_FrTu_January_16/passed.somatic.snvs_indels_snpEff_on_exome_combined.txt
+    output: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0411_1Met.passed.somatic.snvs_indels_snpEff_on_exome_combined.vcf
+    jobid: 283
+    wildcards: sample=NCI0411_1Met
+
+[Fri Jan 11 16:42:28 2019]
+Finished job 283.
+3 of 293 steps (1%) done
+
+[Fri Jan 11 16:42:28 2019]
+rule run_pretty_vcf:
+    input: /data/GuhaData/LAT/strelka_raw_vcf/NCI0423_T2D_E/passed.somatic.snvs_indels_snpEff_on_exome_combined.txt
+    output: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/NCI0423_T2D_E.passed.somatic.snvs_indels_snpEff_on_exome_combined.vcf
+    jobid: 262
+    wildcards: sample=NCI0423_T2D_E
+
+[Fri Jan 11 16:42:29 2019]
+Finished job 262.
+4 of 293 steps (1%) done
+
+[Fri Jan 11 16:42:29 2019]
+rule run_pretty_vcf:
+    input: /data/GuhaData/LAT/strelka_raw_vcf/CL0088_T2D_E/passed.somatic.snvs_indels_snpEff_on_exome_combined.txt
+    output: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0088_T2D_E.passed.somatic.snvs_indels_snpEff_on_exome_combined.vcf
+    jobid: 244
+    wildcards: sample=CL0088_T2D_E
+
+[Fri Jan 11 16:42:30 2019]
+Finished job 244.
+5 of 293 steps (2%) done
+
+[Fri Jan 11 16:42:30 2019]
+rule run_pretty_vcf:
+    input: /data/GuhaData/LAT/strelka_raw_vcf_missing/RA007_A1/passed.somatic.snvs_indels_snpEff_on_exome_combined.txt
+    output: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/RA007_A1.passed.somatic.snvs_indels_snpEff_on_exome_combined.vcf
+    jobid: 307
+    wildcards: sample=RA007_A1
+
+[Fri Jan 11 16:42:31 2019]
+Finished job 307.
+6 of 293 steps (2%) done
+
+[Fri Jan 11 16:42:31 2019]
+rule run_pretty_vcf:
+    input: /data/GuhaData/LAT/strelka_raw_vcf_missing/RA007_B2a/passed.somatic.snvs_indels_snpEff_on_exome_combined.txt
+    output: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/RA007_B2a.passed.somatic.snvs_indels_snpEff_on_exome_combined.vcf
+    jobid: 310
+    wildcards: sample=RA007_B2a
+
+[Fri Jan 11 16:42:32 2019]
+Finished job 310.
+7 of 293 steps (2%) done
+
+[Fri Jan 11 16:42:32 2019]
+rule run_cnv_parsing:
+    input: /data/browna6/evolution/facets/egfr_exome/fitted/RA007_Li1.snppile.csv.gz_fitted.csv
+    output: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/RA007/RA007_Li1_cnvInput.txt
+    jobid: 326
+    wildcards: patient=RA007, sample=RA007_Li1
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /spin1/users/browna6/pwgs_snakemake/.snakemake/log/2019-01-11T164223.629365.snakemake.log

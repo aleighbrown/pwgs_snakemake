@@ -1,0 +1,26 @@
+Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
+Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
+Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 10
+Job counts:
+	count	jobs
+	1	all
+	1	move_and_unzip_files
+	1	run_final_parser_ms
+	1	submit_pwgs
+	1	write_results
+	5
+
+[Tue Mar 26 17:47:27 2019]
+rule submit_pwgs:
+    input: /data/GuhaData/pwgs/pwgs_inputs/RA7_39/CL0039/CL0039.params.json, /data/GuhaData/pwgs/pwgs_inputs/RA7_39/CL0039/CL0039.cnvs.txt, /data/GuhaData/pwgs/pwgs_inputs/RA7_39/CL0039/CL0039.ssm.txt
+    output: /data/GuhaData/pwgs/pwgs_output/RA7_39/CL0039/CL0039/trees.zip
+    jobid: 23
+    reason: Missing output files: /data/GuhaData/pwgs/pwgs_output/RA7_39/CL0039/CL0039/trees.zip
+    wildcards: patient=CL0039, sample=CL0039
+    threads: 20
+
+python2 /home/browna6/phylowgs/multievolve.py -O /data/GuhaData/pwgs/pwgs_output/RA7_39/CL0039/CL0039 -r 7815 96 133 9413 3187 8718 4075 952 2955 3747 6982 3293 1830 6682 5625 7891 6448 6379 6266 3551 --num-chains 20 --ssms /data/GuhaData/pwgs/pwgs_inputs/RA7_39/CL0039/CL0039.ssm.txt --cnvs /data/GuhaData/pwgs/pwgs_inputs/RA7_39/CL0039/CL0039.cnvs.txt --params /data/GuhaData/pwgs/pwgs_inputs/RA7_39/CL0039/CL0039.params.json
+Submitted job 23 with external jobid '23061723'.

@@ -1,0 +1,2 @@
+SyntaxError in line 16 of /spin1/users/browna6/pwgs_snakemake/move_unzip.snakefile:
+Unexpected keyword expand in rule definition (move_unzip.snakefile, line 16)

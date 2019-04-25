@@ -1,0 +1,4 @@
+Building DAG of jobs...
+MissingInputException in line 19 of /spin1/users/browna6/pwgs_snakemake/run_full_pipeline.snakefile:
+Missing input files for rule write_pwgs_results:
+/data/browna6/evolution/pwgs/pwgs_output/egfr_exome_bysample/CL0039/CL0039_T1D_E/trees.zip

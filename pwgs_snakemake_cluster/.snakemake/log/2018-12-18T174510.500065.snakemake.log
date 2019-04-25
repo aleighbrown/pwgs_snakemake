@@ -1,0 +1,5 @@
+Building DAG of jobs...
+InputFunctionException in line 31 of /spin1/users/browna6/pwgs_snakemake/phyloWGSparsing.snakefile:
+NameError: name 'getVCFFile' is not defined
+Wildcards:
+sample=CL0183_T2D_E

@@ -1,0 +1,3 @@
+WorkflowError in line 4 of /spin1/users/browna6/pwgs_snakemake/phyloWGSparsing.snakefile:
+Failed to open /spin1/users/browna6/pwgs_snakemake/facets.snakefile.
+  File "/spin1/users/browna6/pwgs_snakemake/phyloWGSparsing.snakefile", line 4, in <module>

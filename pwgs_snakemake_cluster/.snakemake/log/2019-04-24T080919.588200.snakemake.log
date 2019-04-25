@@ -1,0 +1,35 @@
+Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
+Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
+Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	all
+	1	move_and_unzip_files
+	1	run_final_parser_ms
+	3
+
+[Wed Apr 24 08:09:20 2019]
+rule move_and_unzip_files:
+    input: /data/GuhaData/pwgs/pwgs_output/RA7_39/CL0039/CL0039/CL0039.mutass.zip, /data/GuhaData/pwgs/pwgs_output/RA7_39/CL0039/CL0039/CL0039.muts.json.gz, /data/GuhaData/pwgs/pwgs_output/RA7_39/CL0039/CL0039/CL0039.summ.json.gz
+    output: /data/GuhaData/phylowgs_results/witness/data_RA7_39/CL0039/CL0039.mutass.zip, /data/GuhaData/phylowgs_results/witness/data_RA7_39/CL0039/CL0039.muts.json, /data/GuhaData/phylowgs_results/witness/data_RA7_39/CL0039/CL0039.summ.json
+    jobid: 3
+    wildcards: patient=CL0039, sample=CL0039
+
+[Wed Apr 24 08:09:24 2019]
+Finished job 3.
+1 of 3 steps (33%) done
+
+[Wed Apr 24 08:09:24 2019]
+rule run_final_parser_ms:
+    input: /data/GuhaData/pwgs/pwgs_inputs/RA7_39/CL0039/CL0039.cnvs.txt, /data/GuhaData/pwgs/pwgs_inputs/RA7_39/CL0039/CL0039.ssm.txt, /data/GuhaData/phylowgs_results/witness/data_RA7_39/CL0039/CL0039.summ.json, /data/GuhaData/phylowgs_results/witness/data_RA7_39/CL0039/CL0039.mutass.zip
+    output: /data/browna6/evolution/pwgs/phyloresults_parsed_editedCopy2/CL0039/CL0039/tree_likelihoods.txt
+    jobid: 1
+    wildcards: patient=CL0039, sample=CL0039
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /spin1/users/browna6/pwgs_snakemake/.snakemake/log/2019-04-24T080919.588200.snakemake.log

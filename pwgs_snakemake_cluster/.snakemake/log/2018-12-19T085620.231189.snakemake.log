@@ -1,0 +1,20 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	produce_phylo_input
+	4	run_pretty_vcf
+	5
+
+[Wed Dec 19 08:56:20 2018]
+rule run_pretty_vcf:
+    input: /data/GuhaData/LAT/strelka_raw_vcf/CL0038_T2D_E/passed.somatic.snvs_indels_snpEff_on_exome_combined.txt
+    output: /data/browna6/evolution/pwgs/phyloinputs/egfr_exome/CL0038_T2D_E.passed.somatic.snvs_indels_snpEff_on_exome_combined.vcf
+    jobid: 2
+    wildcards: sample=CL0038_T2D_E
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: /spin1/users/browna6/pwgs_snakemake/.snakemake/log/2018-12-19T085620.231189.snakemake.log

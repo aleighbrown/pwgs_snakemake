@@ -1,0 +1,2 @@
+SyntaxError in line 26 of /spin1/users/browna6/pwgs_snakemake/run_full_pipeline.snakefile:
+Colon expected after keyword shell. (run_full_pipeline.snakefile, line 26)
