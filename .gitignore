@@ -1,3 +1,1 @@
-
-sample_files/T4_passed.somatic.snvs_indels_snpEff_on_exome_combined.txt
-sample_files/passed.somatic.snvs_indels_snpEff_on_exome_combined.txt
+.snakemake
