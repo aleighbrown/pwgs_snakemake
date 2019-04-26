@@ -17,18 +17,18 @@ snppilepath: ./snp-pileup
 
 ##PWGS pre-parsing
 #this is where the parsed data is going to go
-outputdirPhyloInput:  /data/GuhaData/pwgs/pwgs_inputs/CL127_sub/
+outputdirPhyloInput:  /data/GuhaData/pwgs/pwgs_inputs/CL127_sub_priority/
 #if you don't want subsampling leave as " ". if you want a sample leave as " -s ### " with the spaces
-subsampling: " "
+subsampling: " -s 200 "
 
 ##PWGS 
 #this is where pwgs is going to write the results of the multievolve.py script
-outputdirPhyloOutput: /data/GuhaData/pwgs/pwgs_output/CL127_morechains/
+outputdirPhyloOutput: /data/GuhaData/pwgs/pwgs_output/CL127_sub_priority/
 #this is where all the PWGS python scripts are located
 pwgsPythonDir: /home/browna6/phylowgs/
 #this is the data directory of the Witness viewer, the bottom folder should always be /data/
 #a folder for each 'patient' or 'run', will be written here
-outputdirWitness: /data/GuhaData/phylowgs_results/witness/data_CL127_redo/
+outputdirWitness: /data/GuhaData/phylowgs_results/witness/CL127_sub_priority/
 #number of chains that it should be run with
 n_chains: 20
 ##multisample or single sample
@@ -36,6 +36,6 @@ multisample: True
 
 ##PWGS output parsing
 #final output folder for the parsed tree data of PWGS
-parsedOutputPWGS: /data/GuhaData/phylowgs_results/parsed_results_CL127_redo/
+parsedOutputPWGS: /data/GuhaData/phylowgs_results/CL127_sub_priority/
 #how many of the top trees do you want to look at?
 k_trees: 30
