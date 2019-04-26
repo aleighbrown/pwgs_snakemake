@@ -19,7 +19,7 @@ snppilepath: ./snp-pileup
 #this is where the parsed data is going to go
 outputdirPhyloInput:  /data/GuhaData/pwgs/pwgs_inputs/CL127_sub_priority/
 #if you don't want subsampling leave as " ". if you want a sample leave as " -s ### " with the spaces
-subsampling: " -s 200 -P /home/browna6/myData/pwgs_snakemake/cl127_priority "
+subsampling: " -s 120 -P /home/browna6/myData/pwgs_snakemake/cl127_priority "
 
 ##PWGS 
 #this is where pwgs is going to write the results of the multievolve.py script
