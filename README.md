@@ -9,3 +9,10 @@ This is a very rough pipeline, which was pratically built as an excercise in lea
 But it does have a couple of features which might be useful, including a tree parser which PhyloWGS doesn't include in their software. 
 
 Importantly you should be able to get everything set up by editing just the config file and the samples.csv, but there's a couple of instances where I've hard coded paths, which might need to be edited. 
+
+
+
+Submit on a slurm cluster using the command:
+`sbatch --cpus-per-task=20 --time=20:00:00 snakemake.sh`
+
+For an SGE cluster, you'd want a slightly different configuration for the snakemake.sh file. See my "rna_seq_snakemake" repo for an example 
