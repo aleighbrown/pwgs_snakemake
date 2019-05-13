@@ -1,4 +1,0 @@
-Building DAG of jobs...
-MissingInputException in line 47 of /spin1/users/browna6/pwgs_snakemake/run_pwgs.snakefile:
-Missing input files for rule move_and_unzip_files:
-/data/browna6/evolution/pwgs/pwgs_output/witness/data/egfr_per_sample_movetest/CL0038/CL0038_T2D_E

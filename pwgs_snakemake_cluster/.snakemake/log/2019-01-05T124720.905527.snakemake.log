@@ -1,8 +1,0 @@
-Building DAG of jobs...
-MissingInputException in line 13 of /spin1/users/browna6/pwgs_snakemake/move_unzip.snakefile:
-Missing input files for rule all:
-/data/browna6/evolution/pwgs/phyloresults_parsed/CL0038/CL0038_T1D_E/xtree_likelihoods.txt
-/data/browna6/evolution/pwgs/phyloresults_parsed/CL0040/CL0040_T3D_E/xtree_likelihoods.txt
-/data/browna6/evolution/pwgs/phyloresults_parsed/CL0038/CL0038_T3D_E/xtree_likelihoods.txt
-/data/browna6/evolution/pwgs/phyloresults_parsed/CL0040/CL0040_T1D_E/xtree_likelihoods.txt
-/data/browna6/evolution/pwgs/phyloresults_parsed/CL0038/CL0038_T2D_E/xtree_likelihoods.txt

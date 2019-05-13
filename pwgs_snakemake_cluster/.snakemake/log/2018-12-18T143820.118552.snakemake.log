@@ -1,6 +1,0 @@
-Building DAG of jobs...
-InputFunctionException in line 18 of /spin1/users/browna6/pwgs_snakemake/phyloWGSparsing.snakefile:
-FileNotFoundError: File b'/data/browna6/evolution/facets/egfr_exome/fitted/fish.snppile.csv.gz_fitted.csv' does not exist
-Wildcards:
-patient=NCI0423
-sample=NCI0423_T2D_E

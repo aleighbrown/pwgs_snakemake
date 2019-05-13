@@ -1,4 +1,0 @@
-__default__:
-    partition: norm
-    time: 10
-    extra: "--gres=lscratch:10"

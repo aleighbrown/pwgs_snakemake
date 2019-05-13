@@ -1,8 +1,0 @@
-Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
-Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
-Multiple include of /spin1/users/browna6/pwgs_snakemake/helpers.py ignored
-TypeError in line 70 of /spin1/users/browna6/pwgs_snakemake/helpers.py:
-'int' object is not iterable
-  File "/spin1/users/browna6/pwgs_snakemake/run_full_pipeline.snakefile", line 10, in <module>
-  File "/spin1/users/browna6/pwgs_snakemake/run_pwgs.snakefile", line 31, in <module>
-  File "/spin1/users/browna6/pwgs_snakemake/helpers.py", line 70, in make_chains

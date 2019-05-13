@@ -1,3 +1,0 @@
-NameError in line 22 of /spin1/users/browna6/pwgs_snakemake/run_pwgs.snakefile:
-name 'configfile' is not defined
-  File "/spin1/users/browna6/pwgs_snakemake/run_pwgs.snakefile", line 22, in <module>

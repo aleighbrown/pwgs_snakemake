@@ -3,7 +3,7 @@
 module load snakemake  || exit 1
 
 sbcmd="sbatch --cpus-per-task={threads}"
-sbcmd+=" --time=52:00:00 --partition={cluster.partition}"
+sbcmd+=" --time=14:00:00 --partition={cluster.partition}"
 sbcmd+=" {cluster.extra}"
 
 snakemake -s run_full_pipeline.snakefile -pr --keep-going --local-cores $SLURM_CPUS_PER_TASK \

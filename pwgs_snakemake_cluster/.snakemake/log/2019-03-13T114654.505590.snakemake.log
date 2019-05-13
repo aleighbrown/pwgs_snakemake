@@ -1,3 +1,0 @@
-WorkflowError in line 26 of /spin1/users/browna6/pwgs_snakemake/dirty_run.snakefile:
-Duplicate output file pattern in rule all. First two duplicate for entries 0 and 1
-  File "/spin1/users/browna6/pwgs_snakemake/dirty_run.snakefile", line 26, in <module>

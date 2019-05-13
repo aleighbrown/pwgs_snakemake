@@ -1,12 +1,13 @@
 #this is the main csv which contains the important information for all the following steps, it should be formated as samples.csv example
-sampleCSVpath: /data/browna6/pwgs_snakemake/sample_files/egfr_127.csv
+sampleCSVpath: /data/browna6/pwgs_snakemake/sample_files/egfr_samples_404_edited_copy_numbers.csv
 #sampleCSVpath: /data/browna6/evolution/egfr_samples copy.csv
 
 
 ##every folder path should end in a trailing backslash, errors might crop up otherwise
 ##FACETS parameters
 #path of output
-outputdir:  /data/browna6/evolution/facets/egfr_exome/
+outputdir:  /data/GuhaData/pwgs/pwgs_inputs/NCI404_edited_copy_numbers_T1_T2/
+cnv_files_folder : /data/GuhaData/pwgs/pwgs_inputs/NCI404_edited_copy_numbers/
 #parameters for the pileup of the hetrozygous snps
 snppileup_parms: "-g -q15 -Q20 -P100 -r25,0 -d10000"
 #file path for the common snps
@@ -17,18 +18,18 @@ snppilepath: ./snp-pileup
 
 ##PWGS pre-parsing
 #this is where the parsed data is going to go
-outputdirPhyloInput:  /data/GuhaData/pwgs/pwgs_inputs/CL127_sub_priority/
+outputdirPhyloInput:  /data/GuhaData/pwgs/pwgs_inputs/NCI404_edited_copy_numbers_T1_T2/
 #if you don't want subsampling leave as " ". if you want a sample leave as " -s ### " with the spaces
-subsampling: " -s 120 -P /home/browna6/myData/pwgs_snakemake/cl127_priority "
+subsampling: " "
 
 ##PWGS 
 #this is where pwgs is going to write the results of the multievolve.py script
-outputdirPhyloOutput: /data/GuhaData/pwgs/pwgs_output/CL127_sub_priority/
+outputdirPhyloOutput: /data/GuhaData/pwgs/pwgs_output/NCI404_edited_copy_numbers_T1_T2/
 #this is where all the PWGS python scripts are located
 pwgsPythonDir: /home/browna6/phylowgs/
 #this is the data directory of the Witness viewer, the bottom folder should always be /data/
 #a folder for each 'patient' or 'run', will be written here
-outputdirWitness: /data/GuhaData/phylowgs_results/witness/CL127_sub_priority/
+outputdirWitness: /data/GuhaData/phylowgs_results/witness/data_NCI404_edited_copy_numbers_T1_T2/
 #number of chains that it should be run with
 n_chains: 20
 ##multisample or single sample
@@ -36,6 +37,6 @@ multisample: True
 
 ##PWGS output parsing
 #final output folder for the parsed tree data of PWGS
-parsedOutputPWGS: /data/GuhaData/phylowgs_results/CL127_sub_priority/
+parsedOutputPWGS: /data/GuhaData/phylowgs_results/parsed_results_NCI404_edited_copy_numbers_T1_T2/
 #how many of the top trees do you want to look at?
 k_trees: 30

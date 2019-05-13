@@ -1,3 +1,0 @@
-WorkflowError in line 2 of /spin1/users/browna6/pwgs_snakemake/phyloWGSparsing.snakefile:
-Config file samples.yaml not found.
-  File "/spin1/users/browna6/pwgs_snakemake/phyloWGSparsing.snakefile", line 2, in <module>

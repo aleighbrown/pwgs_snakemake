@@ -1,6 +1,0 @@
-Building DAG of jobs...
-InputFunctionException in line 18 of /spin1/users/browna6/pwgs_snakemake/phyloWGSparsing.snakefile:
-NameError: name 'DATA' is not defined
-Wildcards:
-patient=NCI0402
-sample=NCI0402_T2D_E

@@ -25,9 +25,9 @@ rule first_parse:
 
 rule run_cnv_parsing:
 	input:
-		cnv_file="/data/browna6/evolution/facets/egfr_exome/fitted/{sample}.snppile.csv.gz_fitted.csv"
+		cnv_file=config["cnv_files_folder"] + "{sample}.snppile.csv.gz_fitted.csv"
 	params:
-		purity = lambda wildcards: getPurity("/data/browna6/evolution/facets/egfr_exome/fitted/{samp}.snppile.csv.gz_fitted.csv".format(samp = wildcards.sample)),
+		purity = lambda wildcards: getPurity(config["cnv_files_folder"] + "{samp}.snppile.csv.gz_fitted.csv".format(samp = wildcards.sample)),
 		patientFolder = lambda wildcards: getPatient(wildcards.sample),
 		fileType = lambda wildcards: getFileType(wildcards.sample),
 		outputdir = config["outputdirPhyloInput"]
