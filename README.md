@@ -4,7 +4,7 @@ Currently set up to run on copy number calls by FACETS, https://github.com/mskcc
 
 Also runs on a vcf file that includes both indels and ssms mushed into one with a parser for making it into a useful file for PhyloWGS. Original PhyloWGS software here: https://github.com/morrislab/phylowgs
 
-Features which might be useful include a tree parser which PhyloWGS doesn't include in their software. 
+Features which might be useful include a tree parser which PhyloWGS doesn't include in their software, an additional classes for a "StrelkaCombinedParser" which will parse a VCF containing both indels and SSMs produced by combining the strelka.snv and strelk.indel files, as well as FACETs copy number caller.  
 
 Importantly you should be able to get everything set up by editing just the config file and the samples.csv, but there's a couple of instances with hard coded paths, which might need to be edited. 
 
