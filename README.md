@@ -1,6 +1,6 @@
 # pwgs_snakemake
 Snakemake pipeline for running PhyloWGS on NIH Biowulf Cluster
-Currently set up to run on copy number calls by FACETS, https://github.com/mskcc/facets, using a parser with an additional FACETS class. Theoretically it should be able to run on any kind of copy number if the appropiate changes are made. 
+Currently set up to run on copy number calls by FACETS, https://github.com/mskcc/facets, using a parser with an additional FACETS class. Theoretically it should be able to run with any kind of copy number caller if the appropiate changes are made. 
 
 Also runs on a vcf file that includes both indels and ssms mushed into one with a parser for making it into a useful file for PhyloWGS. Original PhyloWGS software here: https://github.com/morrislab/phylowgs
 
