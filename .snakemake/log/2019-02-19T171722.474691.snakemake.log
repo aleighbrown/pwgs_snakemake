@@ -1,3 +1,0 @@
-SyntaxError in line 56 of /spin1/users/browna6/pwgs_snakemake/phyloWGSparsing.snakefile:
-invalid syntax
-  File "/spin1/users/browna6/pwgs_snakemake/run_full_pipeline.snakefile", line 8, in <module>

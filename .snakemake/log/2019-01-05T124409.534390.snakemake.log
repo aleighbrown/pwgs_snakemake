@@ -1,3 +1,0 @@
-SyntaxError:
-A rule with dynamic output may not define any non-dynamic output files.
-  File "/spin1/users/browna6/pwgs_snakemake/move_unzip.snakefile", line 56, in <module>

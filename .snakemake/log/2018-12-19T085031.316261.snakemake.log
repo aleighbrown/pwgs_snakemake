@@ -1,4 +1,0 @@
-Building DAG of jobs...
-MissingInputException in line 31 of /spin1/users/browna6/pwgs_snakemake/phyloWGSparsing.snakefile:
-Missing input files for rule run_pretty_vcf:
-/data/GuhaData/LAT/strelka_raw_vcf/NCI0402_T2D_E/passed.somatic.snvs_indels_snpEff_on_exome_combined.txt
