@@ -1,1 +1,6 @@
-patient,sample,tumor_bam,normal_bam,cnv_file_type,vcf_file,vcf_file_type
+patient,sample,cnv_file_type,vcf_file,vcf_file_type
+patient_a,one_a,battenberg,/path/to/vcf/one_a.vcf,sanger
+patient_a,two_a,battenberg-smchet,/path/to/vcf/two_a.vcf,mutect_pcawg
+patient_a,three_a,titan,/path/to/vcf/three_a.vcf,mutect_smchet
+patient_b,one_b,facets,/path/to/vcf/one_b.vcf,strelka_indelcombined
+patient_b,two_b,facets,/path/to/vcf/two_b.vcf,vardict
