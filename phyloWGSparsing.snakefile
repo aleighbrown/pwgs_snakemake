@@ -31,11 +31,12 @@ rule run_cnv_parsing:
 		purity = lambda wildcards: getPurity(config["cnv_files_folder"] + "{samp}.snppile.csv.gz_fitted.csv".format(samp = wildcards.sample)),
 		patientFolder = lambda wildcards: getPatient(wildcards.sample),
 		fileType = lambda wildcards: getFileType(wildcards.sample),
-		outputdir = config["outputdirPhyloInput"]
+		outputdir = config["outputdirPhyloInput"],
+		pipeline_folder = config['pipeline_folder']
 	output:
 		config["outputdirPhyloInput"] +"{patient}/{sample}_cnvInput.txt"
 	run:
-		shell("python2 /data/browna6/pwgs_snakemake/parse_cnvs_facets_extension.py -f {params.fileType} -c {params.purity} --cnv-output {params.outputdir}{wildcards.patient}/{wildcards.sample}_cnvInput.txt {input}")
+		shell("python2 {params.pipeline_folder}parse_cnvs_facets_extension.py -f {params.fileType} -c {params.purity} --cnv-output {params.outputdir}{wildcards.patient}/{wildcards.sample}_cnvInput.txt {input}")
 
 rule run_pretty_vcf:
 	input:
@@ -50,13 +51,12 @@ rule phylo_input_parsing:
 		vcf_file = lambda wildcards: config["outputdirPhyloInput"] +"{sample}.passed.somatic.snvs_indels_snpEff_on_exome_combined.vcf",
 		cnv_file = lambda wildcards: config["outputdirPhyloInput"] +"{patient}/{sample}_cnvInput.txt"
 	params:
-		subsampling = config['subsampling']
+		subsampling = config['subsampling'],
+		pipeline_folder = config['pipeline_folder']
 	output:
 		params_json = config["outputdirPhyloInput"] + "{patient}/{sample}.params.json",
 		cnv_parsed = config["outputdirPhyloInput"] + "{patient}/{sample}.cnvs.txt",
 		ssm_parsed = config["outputdirPhyloInput"] + "{patient}/{sample}.ssm.txt"
 
 	run:
-		shell("python2 /data/browna6/pwgs_snakemake/create_phylowgs_inputs.py{params.subsampling}--regions all --cnvs {wildcards.sample}={input.cnv_file} --output-cnvs {output.cnv_parsed} --output-variants {output.ssm_parsed} --output-params {output.params_json} --vcf-type {wildcards.sample}=strelka_indelcombined {wildcards.sample}={input.vcf_file}")
-
-
+		shell("python2 {config.pipeline_folder}create_phylowgs_inputs.py{params.subsampling}--regions all --cnvs {wildcards.sample}={input.cnv_file} --output-cnvs {output.cnv_parsed} --output-variants {output.ssm_parsed} --output-params {output.params_json} --vcf-type {wildcards.sample}=strelka_indelcombined {wildcards.sample}={input.vcf_file}")

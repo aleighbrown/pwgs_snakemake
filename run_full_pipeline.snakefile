@@ -43,7 +43,8 @@ rule move_and_unzip_files:
 	params:
 		pwgs_python_directory = config["pwgsPythonDir"],
 		pwgs_fold = config["outputdirPhyloOutput"],
-		witness_fold = config["outputdirWitness"] + "{patient}/"
+		witness_fold = config["outputdirWitness"] + "{patient}/",
+		pwgsPythonDir = config['pwgsPythonDir']
 
 	output:
 		mutass_file = config["outputdirWitness"] + "{patient}/{sample}.mutass.zip",
@@ -57,7 +58,7 @@ rule move_and_unzip_files:
 
 		shell("gunzip -f {params.witness_fold}{wildcards.sample}*.gz")
 
-		shell("python2 /data/browna6/evolution/pwgs/pwgs_output/witness/index_data.py")
+		shell("python2 {params.pwgsPythonDir}/witness/index_data.py")
 
 rule run_final_parser_ms:
 	input:
@@ -67,19 +68,12 @@ rule run_final_parser_ms:
 		mutasgn_path = lambda wildcards: config["outputdirWitness"] + "{patient}/{sample}.mutass.zip"
 	params:
 		output_parsed_pwgs_results = config['parsedOutputPWGS'],
-
-		k_trees = config['k_trees']
+		k_trees = config['k_trees'],
+		pwgs_pipeline = config['pipeline_folder']
 
 	output:
 		#dynamic(config['parsedOutputPWGS'] + "{patient}/{sample}/{treenumber}.csv"),
 		config['parsedOutputPWGS'] + "{patient}/{sample}/tree_likelihoods.txt"
 	run:
 		shell('mkdir -p {params.output_parsed_pwgs_results}{wildcards.patient}/{wildcards.sample}')
-		shell('python2 /data/browna6/pwgs_snakemake/parse_pwgs_output.py --k {params.k_trees} --cnv_input {input.cnv_input} --ssm_input {input.ssm_input} --summary_file {input.summary_file} --mutasgn_path {input.mutasgn_path} --output_folder {params.output_parsed_pwgs_results}{wildcards.patient}/{wildcards.sample}')
-
-
-
-
-
-
-
+		shell('python2 {params.pwgs_pipeline}parse_pwgs_output.py --k {params.k_trees} --cnv_input {input.cnv_input} --ssm_input {input.ssm_input} --summary_file {input.summary_file} --mutasgn_path {input.mutasgn_path} --output_folder {params.output_parsed_pwgs_results}{wildcards.patient}/{wildcards.sample}')
