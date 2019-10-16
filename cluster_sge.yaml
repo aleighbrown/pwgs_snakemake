@@ -1,0 +1,5 @@
+__default__:
+    h_vmem: 4G
+    h_rt:   1:0:0
+    pe: smp 1
+    R:  y

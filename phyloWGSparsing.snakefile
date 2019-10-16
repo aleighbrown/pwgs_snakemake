@@ -59,4 +59,4 @@ rule phylo_input_parsing:
 		ssm_parsed = config["outputdirPhyloInput"] + "{patient}/{sample}.ssm.txt"
 
 	run:
-		shell("python2 {config.pipeline_folder}create_phylowgs_inputs.py{params.subsampling}--regions all --cnvs {wildcards.sample}={input.cnv_file} --output-cnvs {output.cnv_parsed} --output-variants {output.ssm_parsed} --output-params {output.params_json} --vcf-type {wildcards.sample}=strelka_indelcombined {wildcards.sample}={input.vcf_file}")
+		shell("python2 {params.pipeline_folder}create_phylowgs_inputs.py{params.subsampling}--regions all --cnvs {wildcards.sample}={input.cnv_file} --output-cnvs {output.cnv_parsed} --output-variants {output.ssm_parsed} --output-params {output.params_json} --vcf-type {wildcards.sample}=strelka_indelcombined {wildcards.sample}={input.vcf_file}")

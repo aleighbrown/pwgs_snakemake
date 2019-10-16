@@ -1,5 +1,5 @@
 #this is the main csv which contains the important information for all the following steps, it should be formated as samples.csv example
-sampleCSVpath: /data/browna6/pwgs_snakemake/sample_files/sample_file.csv
+sampleCSVpath: /home/annbrown/data/nitin/data/CL0162/CL0162/sample.csv
 #this is the full path to this pwgs_folder
 pipeline_folder: /home/annbrown/data/nitin/pwgs_snakemake/
 
@@ -7,23 +7,23 @@ pipeline_folder: /home/annbrown/data/nitin/pwgs_snakemake/
 ##every folder path should end in a trailing backslash, errors might crop up otherwise
 ##FACETS parameters
 #path of output
-cnv_files_folder : /data/GuhaData/pwgs/pwgs_inputs/
+cnv_files_folder : /home/annbrown/data/nitin/pwgs_inputs/
 
 
 ##PWGS pre-parsing
 #this is where the parsed data is going to go
-outputdirPhyloInput:  /data/GuhaData/pwgs/pwgs_inputs/
+outputdirPhyloInput:  /home/annbrown/data/nitin/pwgs_inputs/
 #if you don't want subsampling leave as " ". if you want a sample leave as " -s ### " with the spaces
 subsampling: " "
 
 ##PWGS
 #this is where pwgs is going to write the results of the multievolve.py script
-outputdirPhyloOutput: /data/GuhaData/pwgs/pwgs_output/
+outputdirPhyloOutput: /home/annbrown/data/nitin/pwgs_output/
 #this is where all the PWGS python scripts are located
 pwgsPythonDir: /home/annbrown/data/nitin/phylowgs/
 #this is the data directory of the Witness viewer, the bottom folder should always be /data/
 #a folder for each 'patient' or 'run', will be written here
-outputdirWitness: /data/GuhaData/phylowgs_results/witness/data/
+outputdirWitness: /home/annbrown/data/nitin/pwgs_output/witness/data/
 #number of chains that it should be run with
 n_chains: 20
 ##multisample or single sample
@@ -31,6 +31,6 @@ multisample: True
 
 ##PWGS output parsing
 #final output folder for the parsed tree data of PWGS
-parsedOutputPWGS: /data/GuhaData/phylowgs_results/
+parsedOutputPWGS: /home/annbrown/data/nitin/pwgs_output/
 #how many of the top trees do you want to look at?
 k_trees: 30
