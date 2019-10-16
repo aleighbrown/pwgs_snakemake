@@ -27,13 +27,15 @@ else:
 rule write_results:
 	input:
 		lambda wildcards: config['outputdirPhyloOutput'] + "{patient}/{sample}/" + "trees.zip"
+	params:
+		pwgsPythonDir = config['pwgsPythonDir']
 	output:
 		mutass_zip = config["outputdirPhyloOutput"] + "{patient}/{sample}/{sample}.mutass.zip",
 		muts_json_gz = config["outputdirPhyloOutput"] + "{patient}/{sample}/{sample}.muts.json.gz",
 		summ_json_gz = config["outputdirPhyloOutput"] + "{patient}/{sample}/{sample}.summ.json.gz"
 
 	shell:
-		"python2 /home/browna6/phylowgs/write_results.py --allow-polyclonal --include-polyclonal {wildcards.sample} {input} {output.summ_json_gz} {output.muts_json_gz} {output.mutass_zip}"
+		"python2 {params.pwgsPythonDir}/write_results.py --allow-polyclonal --include-polyclonal {wildcards.sample} {input} {output.summ_json_gz} {output.muts_json_gz} {output.mutass_zip}"
 
 rule move_and_unzip_files:
 	input:
