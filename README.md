@@ -1,3 +1,10 @@
+This pipeline was used to produce and parse the trees for this paper. 
+
+https://www.sciencedirect.com/science/article/pii/S2666379120300070
+
+if you use it in your work please cite the above ^ as well as the revelant software packages
+
+
 # pwgs_snakemake
 Snakemake pipeline for running PhyloWGS on NIH Biowulf Cluster
 Currently set up to run on copy number calls by FACETS, https://github.com/mskcc/facets, using a parser with an additional FACETS class. Theoretically it should be able to run with any kind of copy number caller if the appropiate changes are made. 
